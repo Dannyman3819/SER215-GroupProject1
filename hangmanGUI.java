@@ -1,11 +1,81 @@
+/**---------------------------------------
+ //
+ // Project: SER215 Group Project
+ //
+ // hangmanGUI class
+ // @author: Daniel Blevins
+ // @date: 2017-6-9
+ //
+ ---------------------------------------*/
+
+/** ---USAGE:---
+hangmanGUI(String word, String difficulty, String guessRemain)
+    options:
+    	word - string to display to user in text box
+		difficulty - string to display to user in options box
+		guessRemain - string to display to user in option box
+
+void initGUI()
+    desc:
+        Calls necessary functions to build and show the GUI
+
+void drawNextBodyPart()
+    desc:
+        Loads the next body part
+
+int promptUser(String message, String[] options)
+    desc:
+        create a message box and return the selected option (zero-indexed)
+        returns '-1' if no option was selected
+    options:
+        message - the message to display to the user
+        options - simple array of strings to display to the user
+
+void updateWord(String word)
+	desc:
+        Updates the string show to the user without rebuilding the form
+    options:
+        word - word to be updated
+
+boolean isActionPerformed()
+	desc:
+        returns true when a action happened
+
+string getEventValue()
+    desc:
+        returns string of event value (could be word or one character) or NULL if no new event
+
+void closeGUI()
+    desc:
+        closes the GUI
+
+
+// OPTIONAL FUNCTIONS:
+
+void setGuessedLetters(char character)
+    desc:
+        manually set guessed letter (useful before building or rebuilding GUI)
+    options:
+        character - the letter A-Z to set
+
+void disableButton(char character)
+    desc:
+        manually disable a button
+    options:
+        character - the letter A-Z to disable
+
+*/
+
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
+import javax.swing.JOptionPane;
 
 import static java.lang.System.exit;
 
@@ -13,10 +83,13 @@ public class hangmanGUI extends JPanel {
 	// User set Variables
 	private String word = "";
 	private int drawBodyStatus = 0;
+	private String difficulty = "";
+	private String guessRemain = "";
+	private boolean [] guessedLetters = new boolean[26];
 
 	// Variables set and used in this class
 	private JFrame f;                           // Form window
-	private JButton button;                     // A-Z buttons
+	private JButton[] button = new JButton[26]; // A-Z buttons
 	private GridBagConstraints c;               // General constraints for Panels and Forms
 	private JPanel drawingPanel;                // Panel for Images
 	private BufferedImage image;                // Holds what image to load
@@ -24,6 +97,7 @@ public class hangmanGUI extends JPanel {
 	private String eventValue = "";             // Hold value of user input
 	private JLabel labelImages = new JLabel();  // Used to hold value of image currently being displaying
 	private JTextArea wordTextPanel;            // Panel for displaying word
+	JTextArea guessRemainArea;                  // Panel for displaying Data to user
 
 	// Pictures used for drawing body
 	private String path = "./GroupProject1/src/resources/";
@@ -37,6 +111,17 @@ public class hangmanGUI extends JPanel {
 
 	hangmanGUI(String word) {
 		this.word = word;
+	}
+
+	hangmanGUI(String word, String difficultyDisplay) {
+		this.word = word;
+		this.difficulty = difficultyDisplay;
+	}
+
+	hangmanGUI(String word, String difficultyDisplay, String guessRemain) {
+		this.word = word;
+		this.difficulty = difficultyDisplay;
+		this.guessRemain = guessRemain;
 	}
 
 	hangmanGUI() {
@@ -62,13 +147,20 @@ public class hangmanGUI extends JPanel {
 		_textInputLine();
 
 		// Set size of window then display
-		f.setSize(570, 690);
+		f.setSize(575, 690);
+		f.setResizable(false);
 		f.setVisible(true);
 	}
 
 	public void updateWord(String word){
 		this.word = word;
 		wordTextPanel.setText(word);
+		f.revalidate();
+	}
+
+	public void updateGuessRemain(String guessRemain){
+		this.guessRemain = guessRemain;
+		guessRemainArea.setText(guessRemain);
 		f.revalidate();
 	}
 
@@ -79,10 +171,28 @@ public class hangmanGUI extends JPanel {
 	public String getEventValue(){
 		if(myActionPerformed){
 			myActionPerformed = false;
+			if(eventValue.length() == 1){
+				char letter = eventValue.charAt(0);
+				letter = Character.toUpperCase(letter);
+				setGuessedLetters(letter);
+				disableButton(letter);
+			}
 			return eventValue;
 		} else {
 			return null;
 		}
+	}
+
+	public void setGuessedLetters(char letter){
+		letter = Character.toUpperCase(letter);
+		int numLetter = (int)letter - 65;
+		guessedLetters[numLetter] = true;
+	}
+
+	public void disableButton(char letter){
+		letter = Character.toUpperCase(letter);
+		int numLetter = (int)letter - 65;
+		button[numLetter].setEnabled(false);
 	}
 
 	public void drawNextBodyPart() {
@@ -122,6 +232,17 @@ public class hangmanGUI extends JPanel {
 		drawingPanel.add(labelImages);
 		drawingPanel.revalidate();
 
+	}
+
+	public int promptUser(String message, String [] options) {
+		Object defaultChoice = options[0];
+		int n = JOptionPane.showOptionDialog(this, message, "Hang Man",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, defaultChoice);
+		return n;
+	}
+
+	public void closeGUI(){
+		f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
 	}
 
 	/*protected String _getBlanks(String word){
@@ -165,10 +286,12 @@ public class hangmanGUI extends JPanel {
 
 	protected void _optionPanel(){
 		// Add option panel where the data is showed
-		JPanel optionPanel;                 // Panel for displaying Data to user
+		JPanel optionPanel = new JPanel();
+		guessRemainArea = new JTextArea();
+		JTextArea difficultyArea = new JTextArea();
 		optionPanel = new JPanel();
 		c = new GridBagConstraints();
-		optionPanel.setLayout(new FlowLayout());
+		optionPanel.setLayout(new GridBagLayout());
 		optionPanel.setBackground(Color.gray);
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridwidth = 4;
@@ -176,7 +299,33 @@ public class hangmanGUI extends JPanel {
 		c.gridx = 9;
 		c.gridy = 0;
 		c.weighty = 0;
+		c.insets = new Insets(10,2,10,2);
+		optionPanel.setBorder(BorderFactory.createLineBorder(Color.black, 1));
+		optionPanel.setBackground(Color.white);
+		c.anchor = GridBagConstraints.NORTH;
 		f.add(optionPanel, c);
+
+		c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		//c.gridwidth = 4;
+		c.gridx = 0;
+		c.gridy = 0;
+		c.insets = new Insets(5,5,5,5);
+		guessRemainArea.setText("Guesses Remaining: " + guessRemain);
+		guessRemainArea.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
+		guessRemainArea.setEditable(false);
+		optionPanel.add(guessRemainArea, c);
+
+		c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		//c.gridwidth = 4;
+		c.gridx = 0;
+		c.gridy = -1;
+		c.insets = new Insets(5,5,5,5);
+		difficultyArea.setText("Difficulty: " + difficulty);
+		difficultyArea.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
+		difficultyArea.setEditable(false);
+		optionPanel.add(difficultyArea, c);
 		//updateOptionPanel(); // TODO
 	}
 
@@ -212,7 +361,7 @@ public class hangmanGUI extends JPanel {
 		c = new GridBagConstraints();
 		char currentChar = 'A';
 		for (int i = 0; i < 26; i++) {
-			button = new JButton(String.valueOf(currentChar));
+			button[i] = new JButton(String.valueOf(currentChar));
 			currentChar++;
 			c.fill = GridBagConstraints.HORIZONTAL;
 			if (i < 13) {
@@ -223,15 +372,22 @@ public class hangmanGUI extends JPanel {
 				c.gridy = 3;
 			}
 
-			f.add(button, c);
-			button.addActionListener(new ActionListener() {
+			f.add(button[i], c);
+			//tButton = button[i];
+			button[i].addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					//tButton.setEnabled(false);
 					myActionPerformed = true;
 					eventValue = e.getActionCommand();
 					//System.out.println(e);
 				}
 			});
+
+			//Decide whether to enable or disable
+			if(guessedLetters[i]){
+				button[i].setEnabled(false);
+			}
 		}
 	}
 
@@ -259,6 +415,17 @@ public class hangmanGUI extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				myActionPerformed = true;
 				eventValue = textField.getText();
+				textField.setText("");
+			}
+		});
+
+		// Action specifically for pressing Enter
+		textField.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				myActionPerformed = true;
+				eventValue = textField.getText();
+				textField.setText("");
 			}
 		});
 	}

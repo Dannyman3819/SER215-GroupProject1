@@ -2,7 +2,11 @@
 public class textGUI {
 	public static void main(String[] args) throws  InterruptedException {
 		// Load GUI object with word to display
-		hangmanGUI gui = new hangmanGUI("_ _ _ _");
+		hangmanGUI gui = new hangmanGUI("_ _ _ _", "HARD", "5");
+
+		String[] options = {"EASY", "INTERMEDIATE", "HARD"};
+		int out = gui.promptUser("Please choose a difficulty", options);
+		System.out.println(out);
 
 		// builds the shows GUI
 		gui.initGUI();
@@ -15,6 +19,9 @@ public class textGUI {
 				System.out.println("Key pressed:" + string);
 				gui.drawNextBodyPart();
 				gui.updateWord("_ _ C _");
+
+
+
 			}
 		}
 	}
