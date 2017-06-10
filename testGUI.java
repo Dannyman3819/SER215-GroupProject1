@@ -1,5 +1,5 @@
 
-public class textGUI {
+public class testGUI {
 	public static void main(String[] args) throws  InterruptedException {
 		// Load GUI object with word to display
 		hangmanGUI gui = new hangmanGUI("_ _ _ _", "HARD", "5");
