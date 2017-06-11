@@ -12,27 +12,25 @@ import java.util.Random;
 public class HangDictionary {
 
     static List<String> dictionaryWords = new ArrayList<String>();
-    File hangmanWordsList;
+    static File hangmanWordsList;
 
     /**
      * Main used for testing - PLEASE DO NOT DELETE THE COMMENTED ITEMS! I WILL CLEAN THEM UP ONCE THE CLASS
      * HAS BEEN FULLY TESTED AND WE REACHED A FINAL VERSION
      */
-//    public static void main(String[] args) {
-//
-////        System.out.println("Calling HandleDirectories()");
-//        String pathToDictionary = HandleDirectories();
-//        File hangmanWordsList = new File(pathToDictionary);
-////        System.out.println("hangmanWordsList file name is "+hangmanWordsList.getName());
-////        System.out.println("Calling CheckForFile()");
-//        CheckForFile(hangmanWordsList);
-////        try {
-////            System.out.println("The chosen word is "+SearchWord(hangmanWordsList));
-////            System.out.println("The size of the dictionaryWords list = "+setDictionary(hangmanWordsList).size());
-////        } catch (IOException e) {
-////            e.printStackTrace();
-////        }
-//    }
+    public static void main(String[] args) throws IOException{
+        HangDictionary myDictionary = new HangDictionary();
+
+//        System.out.println("The size of the dictionaryWords list = "+dictionaryWords.size());
+        System.out.println("SearchWordFromFile returns "+SearchWordFromFile());
+        System.out.println("SearchWordFromList returns "+SearchWordFromList());
+
+        System.out.println("getWordFromList() returns "+myDictionary.getWordFromList());
+        System.out.println("getWordFromFile() returns "+myDictionary.getWordFromFile());
+
+        System.out.println("Thank you for choosing the Hangman Dictionary service for your dictionary needs." +
+                "\nHope to serve you again soon :)");
+    }
 
     /**
      * Constractor for the HangDictionary class
@@ -41,10 +39,13 @@ public class HangDictionary {
      * Makes the dictionary available as file and as a List<String>
      */
     public HangDictionary() throws IOException {
+//        System.out.println("Calling HandleDirectories()");
         String pathToDictionary = HandleDirectories();
         hangmanWordsList = new File(pathToDictionary);
+//        System.out.println("hangmanWordsList file name is "+hangmanWordsList.getName());
+//        System.out.println("Calling CheckForFile()");
         CheckForFile(hangmanWordsList);
-        setDictionaryList(hangmanWordsList);
+        setDictionaryList();
     }
 
     /**
@@ -58,8 +59,8 @@ public class HangDictionary {
         path = referenceCodeFile.getAbsolutePath();
 //        System.out.println("absolute path is "+referenceCodeFile.getAbsolutePath());
         newPath = path.substring(0, (path.length()-19)).concat("HangmanWordsList.txt");
-//        newPath = path.substring(0, (path.length()-19)).concat("TestWordsListss.txt");
-        System.out.println("absolute newPath is "+newPath);
+////        newPath = path.substring(0, (path.length()-19)).concat("TestWordsList.txt");
+//        System.out.println("absolute newPath is "+newPath);
 
         return newPath;
     }
@@ -75,14 +76,16 @@ public class HangDictionary {
         try {
             if (!file.exists()) {
                 file.createNewFile();
-                separator = path.substring((path.length()-20), (path.length()-19));
+                separator = path.substring((path.length()-21), (path.length()-20));
+////                separator = path.substring((path.length()-18), (path.length()-17));
 //                System.out.println("separator = "+separator);
-                pathToReadFile = path.substring(0,(path.length()-19))+"src"+separator+file.getName();
+                pathToReadFile = path.substring(0,(path.length()-20))+"src"+separator+file.getName();
+////                pathToReadFile = path.substring(0,(path.length()-17))+"src"+separator+file.getName();
 //                System.out.println("pathToReadFile = "+pathToReadFile);
                 File read = new File(pathToReadFile);
 //                System.out.println("read file name is "+read.getName());
 //                System.out.println("Calling ReadWrite()");
-                ReadWrite(read,file);
+                ReadWrite(read, file);
 //                System.out.println("Opening read file");
 //                OpenFileToScreen(read);
 //                System.out.println("Opening written file");
@@ -90,7 +93,7 @@ public class HangDictionary {
 //                System.out.println("File "+file.getName()+" has been created.");
             }
 //            else
-//                System.out.println("File "+file.getName()+" already existed!");
+//               System.out.println("File "+file.getName()+" already existed!");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,7 +102,6 @@ public class HangDictionary {
     /**
      * Reads words from a file and writes it into another one - used in case the dictionary file has been misplaced
      * @param readFrom (file reading from)
-     * @param writeTo (file writing into)
      */
     private static void ReadWrite(File readFrom, File writeTo) throws IOException {
         BufferedReader inputStream = new BufferedReader(new FileReader(readFrom));
@@ -109,45 +111,27 @@ public class HangDictionary {
 
 //        if(!readFrom.exists())
 //            System.out.println("Does not exist.");
+//
 //        System.out.println("writeTo.getAbsoluteFile() = "+writeTo.getAbsoluteFile());
-        while ((lineWord = inputStream.readLine()) != null) //{
+        while ((lineWord = inputStream.readLine()) != null) {
 //            System.out.print("Writing\t");
 //            System.out.println("inputStream.readLine() = "+lineWord);
             outFile.println(lineWord);
-//        }
+        }
 
         outFile.flush();
         outFile.close();
+
+        hangmanWordsList = writeTo;
+
         inputStream.close();
     }
 
     /**
-     * Opens the file in automatic for the user, or instructs the user to open it
-     * @param file
+     * Searches for a new word to return to the Hangman game from a dictionary file
      */
-    public void OpenFileToScreen(File file){
-
-        //Check if Desktop functions are supported by Platform
-        if(!Desktop.isDesktopSupported()){
-            System.out.println("\tDesktop is not supported."
-                    + "\t\nPlease open the "+file.getName()+"file manually with the default text editor."
-                    + "\t\nThe file is located in the project directory.");
-        }
-        else{
-            try {
-                Desktop.getDesktop().edit(file);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
-    /**
-     * Searches for a new word to return to the Hangman game
-     * @param file (cannot use the filed/non-static variable because this method is static)
-     */
-    private static String SearchWord(File file) throws IOException {
-        BufferedReader inputStream = new BufferedReader(new FileReader(file));
+    private static String SearchWordFromFile() throws IOException {
+        BufferedReader inputStream = new BufferedReader(new FileReader(hangmanWordsList));
         Random findLine = new Random();
         int totCounter = 0, counter = 0, chosenLine;
         String lineWord, chosenWord;
@@ -160,7 +144,7 @@ public class HangDictionary {
         inputStream.close();
 //        System.out.println("inputStream closed");
 
-        BufferedReader searchPool = new BufferedReader(new FileReader(file));
+        BufferedReader searchPool = new BufferedReader(new FileReader(hangmanWordsList));
 //        System.out.println("searchPool opened");
 
         chosenLine = findLine.nextInt(totCounter)+1;
@@ -180,12 +164,28 @@ public class HangDictionary {
     }
 
     /**
+     * Searches for a new word to return to the Hangman game from a dictionary list of strings
+     */
+    private static String SearchWordFromList() {
+        Random findLine = new Random();
+        int chosenLine;
+        String chosenWord;
+
+        if(!dictionaryWords.isEmpty()) {
+            chosenLine = findLine.nextInt(dictionaryWords.size()) + 1;
+            chosenWord = dictionaryWords.get(chosenLine);
+            return chosenWord;
+        }
+        else
+            return "Sorry, dictionary list is empty. Try using the file";
+    }
+
+    /**
      * Sets the List<String> field with all the words of the dictionary giving the option of using this or
      * the dictionary file as search pool
-     * @param file (cannot use the filed/non-static variable because this method is static)
      */
-    private static void setDictionaryList(File file) throws IOException {
-        BufferedReader inputStream = new BufferedReader(new FileReader(file.getName()));
+    private static void setDictionaryList() throws IOException {
+        BufferedReader inputStream = new BufferedReader(new FileReader(hangmanWordsList.getName()));
         String line;
 
         while ((line = inputStream.readLine()) != null)
@@ -196,17 +196,40 @@ public class HangDictionary {
     }
 
     /**
-     * Returns a word to use in the Hangman game
+     * Returns a word to use in the Hangman game (uses a list of strings)
      */
-    public String getWord() throws IOException {
-        System.out.println("Thank you for choosing the Hangman Dictionary service for your dictionary needs." +
-                "\nHope to serve you again soon :) .");
-        return SearchWord(hangmanWordsList);
-    }
+    public String getWordFromList() { return SearchWordFromList(); }
+
+    /**
+     * Returns a word to use in the Hangman game (uses a file)
+     */
+    public String getWordFromFile() throws IOException { return SearchWordFromFile(); }
 
     /**
      * Returns the dictionary in a List<String> format
      */
     public List<String> getDictionary() throws IOException { return dictionaryWords; }
+
+    /**
+     * Opens the dictionary file in automatic for the user, or instructs the user how to open it
+     */
+//    public static void OpenFileToScreen(File file){
+    public void OpenFileToScreen(){
+        //Check if Desktop functions are supported by Platform
+        if(!Desktop.isDesktopSupported()){
+            System.out.println("\tDesktop is not supported."
+                    +"\t\nPlease open the "+hangmanWordsList.getName()+"file manually with the default text editor."
+//                    + "\t\nPlease open the "+file.getName()+"file manually with the default text editor."
+                    + "\t\nThe file is located in the project directory.");
+        }
+        else{
+            try {
+                Desktop.getDesktop().edit(hangmanWordsList);
+//                Desktop.getDesktop().edit(file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
 }
