@@ -18,19 +18,19 @@ public class HangDictionary {
      * Main used for testing - PLEASE DO NOT DELETE THE COMMENTED ITEMS! I WILL CLEAN THEM UP ONCE THE CLASS
      * HAS BEEN FULLY TESTED AND WE REACHED A FINAL VERSION
      */
-    public static void main(String[] args) throws IOException{
-        HangDictionary myDictionary = new HangDictionary();
-
-//        System.out.println("The size of the dictionaryWords list = "+dictionaryWords.size());
-        System.out.println("SearchWordFromFile returns "+SearchWordFromFile());
-        System.out.println("SearchWordFromList returns "+SearchWordFromList());
-
-        System.out.println("getWordFromList() returns "+myDictionary.getWordFromList());
-        System.out.println("getWordFromFile() returns "+myDictionary.getWordFromFile());
-
-        System.out.println("Thank you for choosing the Hangman Dictionary service for your dictionary needs." +
-                "\nHope to serve you again soon :)");
-    }
+//    public static void main(String[] args) throws IOException{
+//        HangDictionary myDictionary = new HangDictionary();
+//
+////        System.out.println("The size of the dictionaryWords list = "+dictionaryWords.size());
+//        System.out.println("SearchWordFromFile returns "+SearchWordFromFile());
+//        System.out.println("SearchWordFromList returns "+SearchWordFromList());
+//
+//        System.out.println("getWordFromList() returns "+myDictionary.getWordFromList());
+//        System.out.println("getWordFromFile() returns "+myDictionary.getWordFromFile());
+//
+//        System.out.println("Thank you for choosing the Hangman Dictionary service for your dictionary needs." +
+//                "\nHope to serve you again soon :)");
+//    }
 
     /**
      * Constractor for the HangDictionary class
