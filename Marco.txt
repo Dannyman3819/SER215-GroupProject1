@@ -1,1 +1,4 @@
-I think I got it :)
+Guys,
+to implement the dictionary, place the files I uploaded in the “Dictionary files” folder in the src directory of the project, create a variable of the “HangDictionary” class, and call the .getWord() method to get the word for the game.
+
+Please go over the code and let me know if I can modify anything to make it better.
