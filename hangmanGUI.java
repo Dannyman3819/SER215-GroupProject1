@@ -236,9 +236,8 @@ public class hangmanGUI extends JPanel {
 
 	public int promptUser(String message, String [] options) {
 		Object defaultChoice = options[0];
-		int n = JOptionPane.showOptionDialog(this, message, "Hang Man",
+		return JOptionPane.showOptionDialog(this, message, "Hang Man",
 				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, defaultChoice);
-		return n;
 	}
 
 	public void closeGUI(){
