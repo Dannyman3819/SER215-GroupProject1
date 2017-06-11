@@ -27,7 +27,7 @@ public class HangDictionary {
 ////        System.out.println("Calling CheckForFile()");
 //        CheckForFile(hangmanWordsList);
 ////        try {
-////            System.out.println("The chosen word is "+searchWord(hangmanWordsList));
+////            System.out.println("The chosen word is "+SearchWord(hangmanWordsList));
 ////            System.out.println("The size of the dictionaryWords list = "+setDictionary(hangmanWordsList).size());
 ////        } catch (IOException e) {
 ////            e.printStackTrace();
@@ -146,7 +146,7 @@ public class HangDictionary {
      * Searches for a new word to return to the Hangman game
      * @param file (cannot use the filed/non-static variable because this method is static)
      */
-    public static String searchWord(File file) throws IOException {
+    private static String SearchWord(File file) throws IOException {
         BufferedReader inputStream = new BufferedReader(new FileReader(file));
         Random findLine = new Random();
         int totCounter = 0, counter = 0, chosenLine;
@@ -198,10 +198,10 @@ public class HangDictionary {
     /**
      * Returns a word to use in the Hangman game
      */
-    public String getWord(File file) throws IOException {
+    public String getWord() throws IOException {
         System.out.println("Thank you for choosing the Hangman Dictionary service for your dictionary needs." +
                 "\nHope to serve you again soon :) .");
-        return searchWord(hangmanWordsList);
+        return SearchWord(hangmanWordsList);
     }
 
     /**
