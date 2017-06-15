@@ -67,13 +67,16 @@ void disableButton(char character)
 */
 
 import java.awt.*;
+
 import javax.swing.*;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
 import javax.swing.plaf.metal.DefaultMetalTheme;
@@ -82,6 +85,7 @@ import javax.swing.plaf.metal.OceanTheme;
 
 import static java.lang.System.exit;
 
+@SuppressWarnings("serial")
 public class hangmanGUI extends JPanel {
 	// User set Variables
 	private String word = "";
@@ -91,7 +95,7 @@ public class hangmanGUI extends JPanel {
 	private boolean [] guessedLetters = new boolean[26];
 
 	// Variables set and used in this class
-	private JFrame f;                           // Form window
+	public JFrame f;                           // Form window
 	private JButton[] button = new JButton[26]; // A-Z buttons
 	private GridBagConstraints c;               // General constraints for Panels and Forms
 	private JPanel drawingPanel;                // Panel for Images
@@ -138,50 +142,7 @@ public class hangmanGUI extends JPanel {
 		this.guessRemain = guessRemain;
 	}
 
-	hangmanGUI() {
-	}
-
-
-	public void initGUI() {
-		initLookAndFeel();
-
-		//Make sure we have nice window decorations.
-		JFrame.setDefaultLookAndFeelDecorated(true);
-
-		// Init main window
-		_mainForm();
-
-		// Set Drawing Panel
-		_drawingPanel();
-
-		// Panel to show data
-		_optionPanel();
-
-		// Panel for displaying Word to guess
-		_wordLine();
-
-		// Add buttons A-Z
-		_buttons();
-
-		// Add user input line
-		_textInputLine();
-
-		// Set size of window then display
-		f.setSize(570, 680);
-		//f.setResizable(false);
-		f.setVisible(true);
-	}
-
-	public void setDifficulty(String difficulty){
-		this.difficulty  = difficulty;
-	}
-
-	public void setGuessRemain(String guessRemain){
-		this.guessRemain = guessRemain;
-		guessRemainArea.setText("Guesses Remaining: " + guessRemain);
-		f.revalidate();
-	}
-
+	hangmanGUI() {}
 
 	private static void initLookAndFeel() {
 		String lookAndFeel = null;
@@ -263,100 +224,6 @@ public class hangmanGUI extends JPanel {
 			}
 		}
 	}
-
-	public void setWord(String word){
-		this.word = word;
-		wordTextPanel.setText(word);
-		f.revalidate();
-	}
-
-	public boolean isActionPerformed(){
-		return myActionPerformed;
-	}
-
-	public String getEventValue(){
-		if(myActionPerformed){
-			myActionPerformed = false;
-			if(eventValue.length() == 1){
-				char letter = eventValue.charAt(0);
-				letter = Character.toUpperCase(letter);
-				setGuessedLetters(letter);
-				disableButton(letter);
-			}
-			return eventValue;
-		} else {
-			return null;
-		}
-	}
-
-	public void setGuessedLetters(char letter){
-		letter = Character.toUpperCase(letter);
-		int numLetter = (int)letter - 65;
-		guessedLetters[numLetter] = true;
-	}
-
-	public void disableButton(char letter){
-		letter = Character.toUpperCase(letter);
-		int numLetter = (int)letter - 65;
-		button[numLetter].setEnabled(false);
-	}
-
-	public void drawNextBodyPart() {
-		File file;
-		drawBodyStatus++;
-		switch (drawBodyStatus) {
-			case 1: file = resourceHead;
-				break;
-			case 2: file = resourceBody;
-				break;
-			case 3: file = resourceLeg1;
-				break;
-			case 4: file = resourceLeg2;
-				break;
-			case 5: file = resourceArm1;
-				break;
-			case 6: file = resourceArm2;
-				break;
-			default: file = resourceHanger;
-				break;
-		}
-		// Try to get file
-		try {
-			image = ImageIO.read(file);
-			/*
-			int w = image.getWidth(null);
-			int h = image.getHeight(null);
-			backgroundImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
-			overlayImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
-			*/
-		} catch (IOException ex) {
-			//cant find file
-			exit(1);
-		}
-		drawingPanel.remove(labelImages);
-		labelImages = new JLabel(new ImageIcon(image));
-		drawingPanel.add(labelImages);
-		drawingPanel.revalidate();
-
-	}
-
-	public int promptUser(String message, String [] options) {
-		Object defaultChoice = options[0];
-		return JOptionPane.showOptionDialog(this, message, "Hang Man",
-				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, defaultChoice);
-	}
-
-	public void closeGUI(){
-		f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
-	}
-
-	/*protected String _getBlanks(String word){
-		String tempStr = "";
-		for(int i=0; i<=word.length(); i++){
-			tempStr += " _ ";
-		}
-		return tempStr;
-	}*/
 
 	protected void _mainForm(){
 		f = new JFrame();
@@ -547,9 +414,144 @@ public class hangmanGUI extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				myActionPerformed = true;
 				eventValue = textField.getText();
+				System.out.println("eventValue = " + eventValue);
 				textField.setText("");
 			}
 		});
+	}
+
+	/*protected String _getBlanks(String word){
+		String tempStr = "";
+		for(int i=0; i<=word.length(); i++){
+			tempStr += " _ ";
+		}
+	return tempStr;
+	}*/
+
+	public void initGUI() {
+		initLookAndFeel();
+
+		//Make sure we have nice window decorations
+		JFrame.setDefaultLookAndFeelDecorated(true);
+
+		// Init main window
+		_mainForm();
+
+		// Set Drawing Panel
+		_drawingPanel();
+
+		// Panel to show data
+		_optionPanel();
+
+		// Panel for displaying Word to guess
+		_wordLine();
+
+		// Add buttons A-Z
+		_buttons();
+
+		// Add user input line
+		_textInputLine();
+
+		// Set size of window then display
+		f.setSize(570, 680);
+		//f.setResizable(false);
+		f.setVisible(true);
+	}
+
+	public void setDifficulty(String difficulty){
+		this.difficulty  = difficulty;
+	}
+
+	public void setGuessRemain(String guessRemain){
+		this.guessRemain = guessRemain;
+		guessRemainArea.setText("Guesses Remaining: " + guessRemain);
+		f.revalidate();
+	}
+
+	public void setWord(String word){
+		this.word = word;
+		wordTextPanel.setText(word);
+		f.revalidate();
+	}
+
+	public boolean isActionPerformed(){
+		return myActionPerformed;
+	}
+
+	public String getEventValue(){
+		if(myActionPerformed){
+			myActionPerformed = false;
+			if(eventValue.length() == 1){
+				char letter = eventValue.charAt(0);
+				letter = Character.toUpperCase(letter);
+				setGuessedLetters(letter);
+				disableButton(letter);
+			}
+			return eventValue;
+		} else {
+			return null;
+		}
+	}
+
+	public void setGuessedLetters(char letter){
+		letter = Character.toUpperCase(letter);
+		int numLetter = (int)letter - 65;
+		guessedLetters[numLetter] = true;
+	}
+
+	public void disableButton(char letter){
+		letter = Character.toUpperCase(letter);
+		int numLetter = (int)letter - 65;
+		button[numLetter].setEnabled(false);
+	}
+
+	public void drawNextBodyPart() {
+		File file;
+		drawBodyStatus++;
+		switch (drawBodyStatus) {
+			case 1: file = resourceHead;
+				break;
+			case 2: file = resourceBody;
+				break;
+			case 3: file = resourceLeg1;
+				break;
+			case 4: file = resourceLeg2;
+				break;
+			case 5: file = resourceArm1;
+				break;
+			case 6: file = resourceArm2;
+				break;
+			default: file = resourceHanger;
+				break;
+		}
+		// Try to get file
+		try {
+			image = ImageIO.read(file);
+			/*
+			int w = image.getWidth(null);
+			int h = image.getHeight(null);
+			backgroundImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+			overlayImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
+			*/
+		} catch (IOException ex) {
+			//cant find file
+			exit(1);
+		}
+		drawingPanel.remove(labelImages);
+		labelImages = new JLabel(new ImageIcon(image));
+		drawingPanel.add(labelImages);
+		drawingPanel.revalidate();
+
+	}
+
+	public int promptUser(String message, String [] options) {
+		Object defaultChoice = options[0];
+		return JOptionPane.showOptionDialog(this, message, "********************** Hang Man ********************** ",
+				JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, defaultChoice);
+	}
+
+	public void closeGUI(){
+		f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
 	}
 
 	@Override

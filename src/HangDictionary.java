@@ -32,7 +32,7 @@ public class HangDictionary {
 //    }
 
     /**
-     * Constractor for the HangDictionary class
+     * Constructor for the HangDictionary class
      * It checks the file path and adjusts it according to the platform used
      * Looks and, if needed, creates the dictionary file
      * Makes the dictionary available as file and as a List<String>
