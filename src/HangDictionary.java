@@ -10,33 +10,6 @@ import java.util.List;
 import java.util.Random;
 
 public class HangDictionary {
-
-    // public class testGUI
-    public static void main(String[] args) throws  InterruptedException, IOException {
-        // Load GUI object with word to display
-        HangDictionary dictionaryPool = new HangDictionary();
-        hangmanGUI gui = new hangmanGUI("_ _ _ _ _ _ _ _ _ _", "HARD", "5");
-
-        String[] options = {"EASY", "INTERMEDIATE", "HARD"};
-        int uselLevel = gui.promptUser("Please choose a difficulty", options);
-        System.out.println(uselLevel);
-
-        // builds the shows GUI
-        gui.initGUI();
-        gui.updateWord(dictionaryPool.getWordFromFile());
-
-        while(true) {
-            Thread.sleep(100);              // Will cause weird issues if some kind of delay isn't used
-            if(gui.isActionPerformed()) {
-                // getEventValue returns a string of what the user guessed
-                String string = gui.getEventValue();
-                System.out.println("Key pressed:" + string);
-                gui.drawNextBodyPart();
-                gui.updateWord("_ _ C _");
-            }
-        }
-    }
-
     static List<String> dictionaryWords = new ArrayList<String>();
     static File hangmanWordsList;
 

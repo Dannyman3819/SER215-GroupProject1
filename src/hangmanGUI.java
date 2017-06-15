@@ -76,6 +76,9 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
+import javax.swing.plaf.metal.DefaultMetalTheme;
+import javax.swing.plaf.metal.MetalLookAndFeel;
+import javax.swing.plaf.metal.OceanTheme;
 
 import static java.lang.System.exit;
 
@@ -109,6 +112,17 @@ public class hangmanGUI extends JPanel {
 	private File resourceArm1 = new File(path + "Arm1.png");
 	private File resourceArm2 = new File(path + "Arm2.png");
 
+	// Setup feels
+	// Specify the look and feel to use by defining the LOOKANDFEEL constant
+	// Valid values are: null (use the default), "Metal", "System", "Motif",
+	// and "GTK"
+	final static String LOOKANDFEEL = "Nimbus";
+
+	// If you choose the Metal L&F, you can also choose a theme.
+	// Specify the theme to use by defining the THEME constant
+	// Valid values are: "DefaultMetal", "Ocean",  and "Test"
+	final static String THEME = "Ocean";
+
 	hangmanGUI(String word) {
 		this.word = word;
 	}
@@ -127,7 +141,13 @@ public class hangmanGUI extends JPanel {
 	hangmanGUI() {
 	}
 
-	public void initGUI(){
+
+	public void initGUI() {
+		initLookAndFeel();
+
+		//Make sure we have nice window decorations.
+		JFrame.setDefaultLookAndFeelDecorated(true);
+
 		// Init main window
 		_mainForm();
 
@@ -147,20 +167,106 @@ public class hangmanGUI extends JPanel {
 		_textInputLine();
 
 		// Set size of window then display
-		f.setSize(575, 690);
-		f.setResizable(false);
+		f.setSize(570, 680);
+		//f.setResizable(false);
 		f.setVisible(true);
 	}
 
-	public void updateWord(String word){
-		this.word = word;
-		wordTextPanel.setText(word);
+	public void setDifficulty(String difficulty){
+		this.difficulty  = difficulty;
+	}
+
+	public void setGuessRemain(String guessRemain){
+		this.guessRemain = guessRemain;
+		guessRemainArea.setText("Guesses Remaining: " + guessRemain);
 		f.revalidate();
 	}
 
-	public void updateGuessRemain(String guessRemain){
-		this.guessRemain = guessRemain;
-		guessRemainArea.setText(guessRemain);
+
+	private static void initLookAndFeel() {
+		String lookAndFeel = null;
+
+		if (LOOKANDFEEL != null) {
+			if (LOOKANDFEEL.equals("Metal")) {
+				lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
+				//  an alternative way to set the Metal L&F is to replace the
+				// previous line with:
+				// lookAndFeel = "javax.swing.plaf.metal.MetalLookAndFeel";
+
+			}
+
+			else if (LOOKANDFEEL.equals("System")) {
+				lookAndFeel = UIManager.getSystemLookAndFeelClassName();
+			}
+
+			else if (LOOKANDFEEL.equals("Motif")) {
+				lookAndFeel = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
+			}
+
+			else if (LOOKANDFEEL.equals("GTK")) {
+				lookAndFeel = "com.sun.java.swing.plaf.gtk.GTKLookAndFeel";
+			}
+
+			else if (LOOKANDFEEL.equals("Nimbus")) {
+				lookAndFeel = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
+			}
+
+			else {
+				System.err.println("Unexpected value of LOOKANDFEEL specified: "
+						+ LOOKANDFEEL);
+				lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
+			}
+
+			try {
+
+
+				UIManager.setLookAndFeel(lookAndFeel);
+
+				// If L&F = "Metal", set the theme
+
+				//if (LOOKANDFEEL.equals("Metal")) {
+					if (THEME.equals("DefaultMetal"))
+						MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
+					else if (THEME.equals("Ocean"))
+						MetalLookAndFeel.setCurrentTheme(new OceanTheme());
+					else
+						MetalLookAndFeel.setCurrentTheme(new TestTheme());
+
+					UIManager.setLookAndFeel(new MetalLookAndFeel());
+				//}
+
+
+
+
+			}
+
+			catch (ClassNotFoundException e) {
+				System.err.println("Couldn't find class for specified look and feel:"
+						+ lookAndFeel);
+				System.err.println("Did you include the L&F library in the class path?");
+				System.err.println("Using the default look and feel.");
+			}
+
+			catch (UnsupportedLookAndFeelException e) {
+				System.err.println("Can't use the specified look and feel ("
+						+ lookAndFeel
+						+ ") on this platform.");
+				System.err.println("Using the default look and feel.");
+			}
+
+			catch (Exception e) {
+				System.err.println("Couldn't get specified look and feel ("
+						+ lookAndFeel
+						+ "), for some reason.");
+				System.err.println("Using the default look and feel.");
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public void setWord(String word){
+		this.word = word;
+		wordTextPanel.setText(word);
 		f.revalidate();
 	}
 
@@ -310,23 +416,28 @@ public class hangmanGUI extends JPanel {
 		//c.gridwidth = 4;
 		c.gridx = 0;
 		c.gridy = 0;
-		c.insets = new Insets(5,5,5,5);
-		guessRemainArea.setText("Guesses Remaining: " + guessRemain);
+		c.insets = new Insets(5, 5, 5, 5);
+		if(guessRemain != "") {
+			guessRemainArea.setText("Guesses Remaining: " + guessRemain);
+		}
 		guessRemainArea.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
 		guessRemainArea.setEditable(false);
 		optionPanel.add(guessRemainArea, c);
+
 
 		c = new GridBagConstraints();
 		c.fill = GridBagConstraints.HORIZONTAL;
 		//c.gridwidth = 4;
 		c.gridx = 0;
 		c.gridy = -1;
-		c.insets = new Insets(5,5,5,5);
-		difficultyArea.setText("Difficulty: " + difficulty);
+		c.insets = new Insets(5, 5, 5, 5);
+		if(difficulty != "") {
+			difficultyArea.setText("Difficulty: " + difficulty);
+		}
 		difficultyArea.setFont(new Font(Font.SANS_SERIF, Font.PLAIN, 15));
 		difficultyArea.setEditable(false);
 		optionPanel.add(difficultyArea, c);
-		//updateOptionPanel(); // TODO
+
 	}
 
 	protected void _wordLine(){
@@ -359,6 +470,7 @@ public class hangmanGUI extends JPanel {
 	protected void _buttons(){
 		// Add buttons A-Z
 		c = new GridBagConstraints();
+		JPanel buttonPanel = new JPanel(new GridLayout(2,13));
 		char currentChar = 'A';
 		for (int i = 0; i < 26; i++) {
 			button[i] = new JButton(String.valueOf(currentChar));
@@ -366,13 +478,15 @@ public class hangmanGUI extends JPanel {
 			c.fill = GridBagConstraints.HORIZONTAL;
 			if (i < 13) {
 				c.gridx = i;
-				c.gridy = 2;
+				c.gridy = 0;
 			} else {
 				c.gridx = i % 13;
-				c.gridy = 3;
+				c.gridy = 1;
 			}
 
-			f.add(button[i], c);
+			button[i].setMargin(new Insets(0,0,0,0));
+			//button[i].setBorder(null);
+			buttonPanel.add(button[i], c);
 			//tButton = button[i];
 			button[i].addActionListener(new ActionListener() {
 				@Override
@@ -389,6 +503,14 @@ public class hangmanGUI extends JPanel {
 				button[i].setEnabled(false);
 			}
 		}
+		// Now add the buttonPanel to the main form
+		c = new GridBagConstraints();
+		c.fill = GridBagConstraints.HORIZONTAL;
+		c.gridx=0;
+		c.gridy=2;
+		c.gridwidth = 13;
+		c.gridheight = 2;
+		f.add(buttonPanel, c);
 	}
 
 	protected void _textInputLine(){

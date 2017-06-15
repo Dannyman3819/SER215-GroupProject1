@@ -2,45 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c9b3dc6b-25e6-45e8-8c77-5c0b7bb5be1c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/HangDictionary.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/HangmanWordsList.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/UML for Iteration 2/Hangman Dictionary Class UML diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/UML for Iteration 2/Hangman Dictionary Use Case UML diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/kotlinc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/HangmanDictionary.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/HangDictionary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/HangmanWordsList.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/TestWordsList.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Arm1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Arm2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Blank.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Body.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Hanger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Head.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Leg1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Leg2.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/HangDictionary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/HangmanWordsList.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/HangmanDictionary.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/TestWordsList.txt" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/HangmanWordsList.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/TestWordsList.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/hangmanGUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TestHangman.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/hangmanGUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Arm1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Arm2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Blank.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Body.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Hanger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Head.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Arm2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/HangDictionary.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/kotlinc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Leg1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Leg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/TestWordsList.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/TestHangman.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Body.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Head.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Blank.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Hanger.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/src/hangmanGUI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Blank.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/UML for Iteration 2/Hangman Dictionary Class UML diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Hanger.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Arm1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/HangDictionary.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Head.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/hangmanGUI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Arm2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Leg2.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/testGUI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Leg1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Dictionary files/UML for Iteration 2/Hangman Dictionary Use Case UML diagram.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/resources/Arm1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/Leg2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/hangmanGUI$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/HangmanDictionary/out/production/HangmanDictionary/HangmanWordsList.txt" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,22 +66,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testGUI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testGUI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hangmanGUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/hangmanGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1632">
-              <caret line="278" column="63" lean-forward="false" selection-start-line="278" selection-start-column="63" selection-end-line="278" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="-37">
+              <caret line="180" column="67" lean-forward="false" selection-start-line="180" selection-start-column="67" selection-end-line="180" selection-end-column="67" />
+              <folding>
+                <element signature="e#4194#4195#0" expanded="true" />
+                <element signature="e#4217#4218#0" expanded="true" />
+                <element signature="method#initGUI#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="e#5089#5090#0" expanded="true" />
+                <element signature="e#5125#5126#0" expanded="true" />
+                <element signature="method#initLookAndFeel#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#getEventValue#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#setGuessedLetters#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#disableButton#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#drawNextBodyPart#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#_mainForm#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
+                <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
+                <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,24 +95,55 @@
       <file leaf-file-name="TestHangman.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TestHangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-875">
-              <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HangDictionary.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HangDictionary.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HangDictionary.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-              <folding />
+            <state relative-caret-position="73">
+              <caret line="202" column="16" lean-forward="false" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
+              <folding>
+                <element signature="method#HandleDirectories#0;class#HangDictionary#0" expanded="false" />
+                <element signature="method#CheckForFile#0;class#HangDictionary#0" expanded="false" />
+                <element signature="method#ReadWrite#0;class#HangDictionary#0" expanded="false" />
+                <element signature="method#SearchWordFromFile#0;class#HangDictionary#0" expanded="false" />
+                <element signature="method#SearchWordFromList#0;class#HangDictionary#0" expanded="false" />
+                <element signature="method#setDictionaryList#0;class#HangDictionary#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hangman.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/hangman.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>null</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -119,7 +156,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/HangDictionary.java" />
+        <option value="$PROJECT_DIR$/src/resources/testTheme.java" />
+        <option value="$PROJECT_DIR$/src/testTheme.java" />
         <option value="$PROJECT_DIR$/src/hangmanGUI.java" />
+        <option value="$PROJECT_DIR$/src/hangman.java" />
       </list>
     </option>
   </component>
@@ -130,10 +171,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="118" />
-    <option name="y" value="82" />
-    <option name="width" value="1454" />
-    <option name="height" value="867" />
+    <option name="x" value="-7" />
+    <option name="width" value="1200" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -151,7 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,8 +219,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,6 +333,136 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -307,6 +477,14 @@
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="passParentEnv" value="true" />
+      <setting name="launchBrowser" value="true" />
+      <setting name="launchBrowserUrl" value="" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -351,6 +529,15 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -384,6 +571,12 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -412,9 +605,25 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
     <configuration default="false" name="hangman" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="HangDictionary" />
+      <option name="MAIN_CLASS_NAME" value="hangman" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -427,8 +636,24 @@
       <envs />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="TestHangman" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="TestHangman" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SER215-GroupProject1" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.hangman" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestHangman" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -442,45 +667,46 @@
       <option name="presentableId" value="Default" />
       <updated>1497489763619</updated>
       <workItem from="1497489767165" duration="372000" />
+      <workItem from="1497491716979" duration="12978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372000" />
+    <option name="totallyTimeSpent" value="13350000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="118" y="82" width="1454" height="867" extended-state="0" />
+    <frame x="-7" y="0" width="1200" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17732963" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991462" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2529349" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22945571" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18243243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32870865" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -496,7 +722,12 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="19" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -506,9 +737,64 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/SER215-GroupProject1.iml">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" lean-forward="false" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hangmanGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3315">
+          <caret line="278" column="20" lean-forward="true" selection-start-line="278" selection-start-column="20" selection-end-line="278" selection-end-column="20" />
+          <folding>
+            <element signature="e#4194#4195#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="method#initGUI#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="e#5089#5090#0" expanded="true" />
+            <element signature="e#5125#5126#0" expanded="true" />
+            <element signature="method#initLookAndFeel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#getEventValue#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#setGuessedLetters#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#disableButton#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#drawNextBodyPart#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_mainForm#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
+            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestHangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HangDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#HandleDirectories#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#CheckForFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#ReadWrite#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromList#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#setDictionaryList#0;class#HangDictionary#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -530,15 +816,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hangmanGUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1632">
+        <state relative-caret-position="3315">
           <caret line="278" column="63" lean-forward="false" selection-start-line="278" selection-start-column="63" selection-end-line="278" selection-end-column="63" />
-          <folding />
+          <folding>
+            <element signature="e#4194#4195#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="method#initGUI#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="e#5089#5090#0" expanded="true" />
+            <element signature="e#5125#5126#0" expanded="true" />
+            <element signature="method#initLookAndFeel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#getEventValue#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#setGuessedLetters#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#disableButton#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#drawNextBodyPart#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_mainForm#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
+            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestHangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-875">
+        <state relative-caret-position="68">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
@@ -546,9 +848,116 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HangDictionary.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="289">
           <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="method#HandleDirectories#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#CheckForFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#ReadWrite#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromList#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#setDictionaryList#0;class#HangDictionary#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SER215-GroupProject1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/testTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestTheme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#2385#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SER215-GroupProject1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="9" lean-forward="false" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/testGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="35" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestHangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hangmanGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37">
+          <caret line="180" column="67" lean-forward="false" selection-start-line="180" selection-start-column="67" selection-end-line="180" selection-end-column="67" />
+          <folding>
+            <element signature="e#4194#4195#0" expanded="true" />
+            <element signature="e#4217#4218#0" expanded="true" />
+            <element signature="method#initGUI#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="e#5089#5090#0" expanded="true" />
+            <element signature="e#5125#5126#0" expanded="true" />
+            <element signature="method#initLookAndFeel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#getEventValue#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#setGuessedLetters#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#disableButton#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#drawNextBodyPart#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_mainForm#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
+            <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
+            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HangDictionary.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="202" column="16" lean-forward="false" selection-start-line="202" selection-start-column="16" selection-end-line="202" selection-end-column="16" />
+          <folding>
+            <element signature="method#HandleDirectories#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#CheckForFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#ReadWrite#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromFile#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#SearchWordFromList#0;class#HangDictionary#0" expanded="false" />
+            <element signature="method#setDictionaryList#0;class#HangDictionary#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/hangman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
