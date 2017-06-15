@@ -86,7 +86,7 @@
                 <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
                 <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
                 <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
-                <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+                <marker date="1497505493199" expanded="false" signature="13975:14925" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -122,8 +122,8 @@
       <file leaf-file-name="hangman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/hangman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+            <state relative-caret-position="204">
+              <caret line="105" column="50" lean-forward="true" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -667,12 +667,12 @@
       <option name="presentableId" value="Default" />
       <updated>1497489763619</updated>
       <workItem from="1497489767165" duration="372000" />
-      <workItem from="1497491716979" duration="12978000" />
+      <workItem from="1497491716979" duration="13222000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13350000" />
+    <option name="totallyTimeSpent" value="13594000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1200" height="1047" extended-state="0" />
@@ -770,7 +770,7 @@
             <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
-            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+            <marker date="1497505493199" expanded="false" signature="13975:14925" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -833,7 +833,7 @@
             <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
-            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+            <marker date="1497505493199" expanded="false" signature="13975:14925" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -883,7 +883,7 @@
           <caret line="43" column="14" lean-forward="false" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
           <folding>
             <element signature="e#0#2385#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -931,7 +931,7 @@
             <element signature="method#_drawingPanel#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_wordLine#0;class#hangmanGUI#0" expanded="false" />
             <element signature="method#_buttons#0;class#hangmanGUI#0" expanded="false" />
-            <marker date="1497503876439" expanded="false" signature="13975:14925" ph="{...}" />
+            <marker date="1497505493199" expanded="false" signature="13975:14925" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -953,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/hangman.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="142" column="34" lean-forward="true" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+        <state relative-caret-position="204">
+          <caret line="105" column="50" lean-forward="true" selection-start-line="105" selection-start-column="50" selection-end-line="105" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

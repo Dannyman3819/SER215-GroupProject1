@@ -102,6 +102,7 @@ public class hangman {
 					boolean missed = true;
 					//System.out.print("\nGuess a letter: ");
 					//guess = keyboard.next();
+					// TODO add support for full word guesses
 					char guess = string.charAt(0);
 					//maxMisses[wrong] = guess.charAt(0);
 
@@ -149,12 +150,14 @@ public class hangman {
 					System.out.println("You Won");
 					String [] options = {"Yes", "No"};
 					gui.promptUser("You Won!!!\nWould you like to play again??", options);
+					// TODO
 					break;
 				} else if (maxMisses - wrong == 0) {
 					//answer = JOptionPane.showConfirmDialog(null, "YOU LOST.\nWould you like to play again?","AGAIN?",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
 					System.out.println("You Lost");
 					String [] options = {"Yes", "No"};
 					gui.promptUser("You Lost!!!\nWould you like to play again??", options);
+					// TODO
 					break;
 				}
 			}
