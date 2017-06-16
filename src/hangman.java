@@ -12,11 +12,11 @@ public class hangman {
 	public static void main (String[] args) throws  InterruptedException, IOException {
 		HangDictionary dictionaryPool = new HangDictionary();
 		int playAgain = 0;
-		hangmanGUI gui = new hangmanGUI();
 		
 		System.out.println("Program Booting...");
 		
 		do{
+			hangmanGUI gui = new hangmanGUI();
 			String word = dictionaryPool.getWordFromFile();
 			String[] difficulty = {"BEGINNER", "INTERMEDIATE", "EXPERT"};
 			String asterisk = "";
@@ -108,9 +108,14 @@ public class hangman {
 								wrong++;
 								
 								// TODO Adjust formula here
-								
+								/*
 								int temp = (wrong % (guessPerBodyPart+1));
 								if(temp == guessPerBodyPart){
+									gui.drawNextBodyPart();
+								}*/
+
+								if(((wrong % guessPerBodyPart) == 0)
+										&& (wrong != 0)) {
 									gui.drawNextBodyPart();
 								}
 							}
