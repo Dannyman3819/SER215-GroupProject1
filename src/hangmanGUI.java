@@ -551,7 +551,8 @@ public class hangmanGUI extends JPanel {
 	}
 
 	public void closeGUI(){
-		f.dispatchEvent(new WindowEvent(f, WindowEvent.WINDOW_CLOSING));
+		f.setVisible(false);
+		f.dispose();
 	}
 
 	@Override
