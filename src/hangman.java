@@ -19,6 +19,7 @@ public class hangman {
 			hangmanGUI gui = new hangmanGUI();
 			String word = dictionaryPool.getWordFromFile();
 			String[] difficulty = {"BEGINNER", "INTERMEDIATE", "EXPERT"};
+			String currentDifficulty = "BEGINNER";
 			String asterisk = "";
 			int maxMisses;
 			
@@ -33,14 +34,17 @@ public class hangman {
 			if (choice == 0) {
 				maxMisses = asterisk.length() * 2;
 				gui.setDifficulty("BEGINNER");
+				currentDifficulty = "BEGINNER";
 			}
 			else if (choice == 1) {
 				maxMisses = asterisk.length() + (int)(asterisk.length()/2);
 				gui.setDifficulty("INTERMEDIATE");
+				currentDifficulty = "INTERMEDIATE";
 			}
 			else if (choice == 2) {
 				maxMisses = asterisk.length();
 				gui.setDifficulty("HARD");
+				currentDifficulty = "HARD";
 			}
 			else
 				break;
@@ -50,7 +54,7 @@ public class hangman {
 			gui.setGuessRemain(String.valueOf(maxMisses));
 
 			int won = 1, wrong = 0;
-			int guessPerBodyPart = ((maxMisses) / 6);
+			Double guessPerBodyPart = Math.ceil(((maxMisses) / 6.0));
 			
 			// GAME PLAY
 			while((maxMisses > wrong) && (won > 0)) {
@@ -112,6 +116,14 @@ public class hangman {
 								int temp = (wrong % (guessPerBodyPart+1));
 								if(temp == guessPerBodyPart){
 									gui.drawNextBodyPart();
+								}*/
+
+								/*if(currentDifficulty == "BEGINNER"){
+
+								} else if (currentDifficulty == "INTERMEDIATE") {
+
+								} else if(currentDifficulty == "HARD") {
+
 								}*/
 
 								if(((wrong % guessPerBodyPart) == 0)
