@@ -115,6 +115,18 @@ public class hangmanGUI extends JPanel {
 	private File resourceLeg2 = new File(path + "Leg2.png");
 	private File resourceArm1 = new File(path + "Arm1.png");
 	private File resourceArm2 = new File(path + "Arm2.png");
+	private File resourceEye1 = new File(path + "Eye1.png");
+	private File resourceEye2 = new File(path + "Eye2.png");
+	private File resourceNose = new File(path + "Nose.png");
+	private File resourceMouth = new File(path + "Mouth.png");
+	private File resourceEar1 = new File(path + "Ear1.png");
+	private File resourceEar2 = new File(path + "Ear2.png");
+	private File resourceHand1 = new File(path + "Hand1.png");
+	private File resourceHand2 = new File(path + "Hand2.png");
+	private File resourceFoot1 = new File(path + "Foot1.png");
+	private File resourceFoot2 = new File(path + "Foot2.png");
+
+
 
 	// Setup feels
 	// Specify the look and feel to use by defining the LOOKANDFEEL constant
@@ -521,7 +533,28 @@ public class hangmanGUI extends JPanel {
 				break;
 			case 6: file = resourceArm2;
 				break;
+			case 7: file = resourceEye1;
+				break;
+			case 8: file = resourceEye2;
+				break;
+			case 9: file = resourceNose;
+				break;
+			case 10: file = resourceMouth;
+				break;
+			case 11: file = resourceEar1;
+				break;
+			case 12: file = resourceEar2;
+				break;
+			case 13: file = resourceHand1;
+				break;
+			case 14: file = resourceHand2;
+				break;
+			case 15: file = resourceFoot1;
+				break;
+			case 16: file = resourceFoot2;
+				break;
 			default: file = resourceHanger;
+				drawBodyStatus = 0;
 				break;
 		}
 		// Try to get file

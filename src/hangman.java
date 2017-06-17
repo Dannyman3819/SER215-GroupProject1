@@ -32,17 +32,20 @@ public class hangman {
 			//a switch statement would not have worked here, because the break in the else
 			//statement needs to exit the do-loop instead of just the switch :)
 			if (choice == 0) {
-				maxMisses = asterisk.length() * 2;
+				//maxMisses = asterisk.length() * 2;
+				maxMisses = 16;
 				gui.setDifficulty("BEGINNER");
 				currentDifficulty = "BEGINNER";
 			}
 			else if (choice == 1) {
-				maxMisses = asterisk.length() + (int)(asterisk.length()/2);
+				//maxMisses = asterisk.length() + (int)(asterisk.length()/2);
+				maxMisses = 12;
 				gui.setDifficulty("INTERMEDIATE");
 				currentDifficulty = "INTERMEDIATE";
 			}
 			else if (choice == 2) {
-				maxMisses = asterisk.length();
+				//maxMisses = asterisk.length();
+				maxMisses = 6;
 				gui.setDifficulty("HARD");
 				currentDifficulty = "HARD";
 			}
@@ -54,7 +57,7 @@ public class hangman {
 			gui.setGuessRemain(String.valueOf(maxMisses));
 
 			int won = 1, wrong = 0;
-			Double guessPerBodyPart = Math.ceil(((maxMisses) / 6.0));
+			//Double guessPerBodyPart = Math.ceil(((maxMisses) / 6.0));
 			
 			// GAME PLAY
 			while((maxMisses > wrong) && (won > 0)) {
@@ -126,10 +129,11 @@ public class hangman {
 
 								}*/
 
-								if(((wrong % guessPerBodyPart) == 0)
+								/*if(((wrong % guessPerBodyPart) == 0)
 										&& (wrong != 0)) {
 									gui.drawNextBodyPart();
-								}
+								}*/
+								gui.drawNextBodyPart();
 							}
 
 							//update GUI with updated word and remaining incorrect guesses
@@ -144,13 +148,13 @@ public class hangman {
 			}
 			
 			if (won == 0) {
-				gui.closeGUI();
 				String [] options = {"Yes", "No"};
 				playAgain = gui.promptUser("You Won!!!\nWould you like to play again??", options);
-			} else if (maxMisses - wrong == 0) {
 				gui.closeGUI();
+			} else if (maxMisses - wrong == 0) {
 				String [] options = {"Yes", "No"};
 				playAgain = gui.promptUser("You Lost!!!\nWould you like to play again??", options);
+				gui.closeGUI();
 			}
 			
 		}while(playAgain == JOptionPane.YES_OPTION);
