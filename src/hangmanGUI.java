@@ -191,43 +191,27 @@ public class hangmanGUI extends JPanel {
 			}
 
 			try {
-
-
 				UIManager.setLookAndFeel(lookAndFeel);
 
-				// If L&F = "Metal", set the theme
+				if (THEME.equals("DefaultMetal"))
+					MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
+				else if (THEME.equals("Ocean"))
+					MetalLookAndFeel.setCurrentTheme(new OceanTheme());
+				else
+					MetalLookAndFeel.setCurrentTheme(new TestTheme());
 
-				//if (LOOKANDFEEL.equals("Metal")) {
-					if (THEME.equals("DefaultMetal"))
-						MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
-					else if (THEME.equals("Ocean"))
-						MetalLookAndFeel.setCurrentTheme(new OceanTheme());
-					else
-						MetalLookAndFeel.setCurrentTheme(new TestTheme());
-
-					UIManager.setLookAndFeel(new MetalLookAndFeel());
-				//}
-
-
-
-
-			}
-
-			catch (ClassNotFoundException e) {
+				UIManager.setLookAndFeel(new MetalLookAndFeel());
+			} catch (ClassNotFoundException e) {
 				System.err.println("Couldn't find class for specified look and feel:"
 						+ lookAndFeel);
 				System.err.println("Did you include the L&F library in the class path?");
 				System.err.println("Using the default look and feel.");
-			}
-
-			catch (UnsupportedLookAndFeelException e) {
+			} catch (UnsupportedLookAndFeelException e) {
 				System.err.println("Can't use the specified look and feel ("
 						+ lookAndFeel
 						+ ") on this platform.");
 				System.err.println("Using the default look and feel.");
-			}
-
-			catch (Exception e) {
+			} catch (Exception e) {
 				System.err.println("Couldn't get specified look and feel ("
 						+ lookAndFeel
 						+ "), for some reason.");
@@ -292,7 +276,6 @@ public class hangmanGUI extends JPanel {
 
 		c = new GridBagConstraints();
 		c.fill = GridBagConstraints.HORIZONTAL;
-		//c.gridwidth = 4;
 		c.gridx = 0;
 		c.gridy = 0;
 		c.insets = new Insets(5, 5, 5, 5);
@@ -306,7 +289,6 @@ public class hangmanGUI extends JPanel {
 
 		c = new GridBagConstraints();
 		c.fill = GridBagConstraints.HORIZONTAL;
-		//c.gridwidth = 4;
 		c.gridx = 0;
 		c.gridy = -1;
 		c.insets = new Insets(5, 5, 5, 5);
@@ -364,16 +346,12 @@ public class hangmanGUI extends JPanel {
 			}
 
 			button[i].setMargin(new Insets(0,0,0,0));
-			//button[i].setBorder(null);
 			buttonPanel.add(button[i], c);
-			//tButton = button[i];
 			button[i].addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					//tButton.setEnabled(false);
 					myActionPerformed = true;
 					eventValue = e.getActionCommand();
-					//System.out.println(e);
 				}
 			});
 
@@ -432,14 +410,6 @@ public class hangmanGUI extends JPanel {
 		});
 	}
 
-	/*protected String _getBlanks(String word){
-		String tempStr = "";
-		for(int i=0; i<=word.length(); i++){
-			tempStr += " _ ";
-		}
-	return tempStr;
-	}*/
-
 	public void initGUI() {
 		initLookAndFeel();
 
@@ -466,7 +436,6 @@ public class hangmanGUI extends JPanel {
 
 		// Set size of window then display
 		f.setSize(570, 680);
-		//f.setResizable(false);
 		f.setVisible(true);
 	}
 
@@ -560,12 +529,6 @@ public class hangmanGUI extends JPanel {
 		// Try to get file
 		try {
 			image = ImageIO.read(file);
-			/*
-			int w = image.getWidth(null);
-			int h = image.getHeight(null);
-			backgroundImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
-			overlayImage = new BufferedImage(w, h, BufferedImage.TYPE_INT_RGB);
-			*/
 		} catch (IOException ex) {
 			//cant find file
 			exit(1);

@@ -6,7 +6,7 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 /**
- * Created by Daniel on 6/14/2017.
+ * Created by SER215 Class - Group 4
  */
 public class hangman {
 	public static void main (String[] args) throws  InterruptedException, IOException {
@@ -32,19 +32,16 @@ public class hangman {
 			//a switch statement would not have worked here, because the break in the else
 			//statement needs to exit the do-loop instead of just the switch :)
 			if (choice == 0) {
-				//maxMisses = asterisk.length() * 2;
 				maxMisses = 16;
 				gui.setDifficulty("BEGINNER");
 				currentDifficulty = "BEGINNER";
 			}
 			else if (choice == 1) {
-				//maxMisses = asterisk.length() + (int)(asterisk.length()/2);
 				maxMisses = 12;
 				gui.setDifficulty("INTERMEDIATE");
 				currentDifficulty = "INTERMEDIATE";
 			}
 			else if (choice == 2) {
-				//maxMisses = asterisk.length();
 				maxMisses = 6;
 				gui.setDifficulty("HARD");
 				currentDifficulty = "HARD";
@@ -57,7 +54,6 @@ public class hangman {
 			gui.setGuessRemain(String.valueOf(maxMisses));
 
 			int won = 1, wrong = 0;
-			//Double guessPerBodyPart = Math.ceil(((maxMisses) / 6.0));
 			
 			// GAME PLAY
 			while((maxMisses > wrong) && (won > 0)) {
@@ -85,18 +81,15 @@ public class hangman {
 				
 				if (gui.isActionPerformed()) {
 					String string = gui.getEventValue();
-					//gui.drawNextBodyPart();
 
 					won = word.length();
 					boolean missed = true;
-					//guess = keyboard.next();
 					
 					if((string.length()> 1) && (string.compareToIgnoreCase(word) == 0))
 						won = 0;
 					else{
 						if(string.length() == 1){
 							char guess = string.charAt(0);
-							//maxMisses[wrong] = guess.charAt(0);
 
 							//places asterisks in place of the letters not guessed correctly, yet
 							for (int i = 0; i < word.length(); i++) {
@@ -113,26 +106,6 @@ public class hangman {
 								gui.setWord(asterisk);
 							else {
 								wrong++;
-								
-								// TODO Adjust formula here
-								/*
-								int temp = (wrong % (guessPerBodyPart+1));
-								if(temp == guessPerBodyPart){
-									gui.drawNextBodyPart();
-								}*/
-
-								/*if(currentDifficulty == "BEGINNER"){
-
-								} else if (currentDifficulty == "INTERMEDIATE") {
-
-								} else if(currentDifficulty == "HARD") {
-
-								}*/
-
-								/*if(((wrong % guessPerBodyPart) == 0)
-										&& (wrong != 0)) {
-									gui.drawNextBodyPart();
-								}*/
 								gui.drawNextBodyPart();
 							}
 
@@ -162,14 +135,5 @@ public class hangman {
 		System.out.println("THE END");
 		System.exit(0);
 	}
-	
-	/*
-	protected static String getBlanks(String word){
-		String tempStr = "";
-		for(int i=0; i<=word.length(); i++){
-			tempStr += " _ ";
-		}
-		return tempStr;
-	}
- 	*/
+
 }
