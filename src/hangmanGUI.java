@@ -126,19 +126,6 @@ public class hangmanGUI extends JPanel {
 	private File resourceFoot1 = new File(path + "Foot1.png");
 	private File resourceFoot2 = new File(path + "Foot2.png");
 
-
-
-	// Setup feels
-	// Specify the look and feel to use by defining the LOOKANDFEEL constant
-	// Valid values are: null (use the default), "Metal", "System", "Motif",
-	// and "GTK"
-	final static String LOOKANDFEEL = "Nimbus";
-
-	// If you choose the Metal L&F, you can also choose a theme.
-	// Specify the theme to use by defining the THEME constant
-	// Valid values are: "DefaultMetal", "Ocean",  and "Test"
-	final static String THEME = "Ocean";
-
 	hangmanGUI(String word) {
 		this.word = word;
 	}
@@ -159,66 +146,34 @@ public class hangmanGUI extends JPanel {
 	private static void initLookAndFeel() {
 		String lookAndFeel = null;
 
-		if (LOOKANDFEEL != null) {
-			if (LOOKANDFEEL.equals("Metal")) {
-				lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
-				//  an alternative way to set the Metal L&F is to replace the
-				// previous line with:
-				// lookAndFeel = "javax.swing.plaf.metal.MetalLookAndFeel";
+		// This sets the 'Nimbus'   LOOKANDFEEL
+		lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
+		//  an alternative way to set the Metal L&F is to replace the
+		// previous line with:
+		// lookAndFeel = "javax.swing.plaf.metal.MetalLookAndFeel";
 
-			}
-
-			else if (LOOKANDFEEL.equals("System")) {
-				lookAndFeel = UIManager.getSystemLookAndFeelClassName();
-			}
-
-			else if (LOOKANDFEEL.equals("Motif")) {
-				lookAndFeel = "com.sun.java.swing.plaf.motif.MotifLookAndFeel";
-			}
-
-			else if (LOOKANDFEEL.equals("GTK")) {
-				lookAndFeel = "com.sun.java.swing.plaf.gtk.GTKLookAndFeel";
-			}
-
-			else if (LOOKANDFEEL.equals("Nimbus")) {
-				lookAndFeel = "javax.swing.plaf.nimbus.NimbusLookAndFeel";
-			}
-
-			else {
-				System.err.println("Unexpected value of LOOKANDFEEL specified: "
-						+ LOOKANDFEEL);
-				lookAndFeel = UIManager.getCrossPlatformLookAndFeelClassName();
-			}
-
-			try {
-				UIManager.setLookAndFeel(lookAndFeel);
-
-				if (THEME.equals("DefaultMetal"))
-					MetalLookAndFeel.setCurrentTheme(new DefaultMetalTheme());
-				else if (THEME.equals("Ocean"))
-					MetalLookAndFeel.setCurrentTheme(new OceanTheme());
-				else
-					MetalLookAndFeel.setCurrentTheme(new TestTheme());
-
-				UIManager.setLookAndFeel(new MetalLookAndFeel());
-			} catch (ClassNotFoundException e) {
-				System.err.println("Couldn't find class for specified look and feel:"
-						+ lookAndFeel);
-				System.err.println("Did you include the L&F library in the class path?");
-				System.err.println("Using the default look and feel.");
-			} catch (UnsupportedLookAndFeelException e) {
-				System.err.println("Can't use the specified look and feel ("
-						+ lookAndFeel
-						+ ") on this platform.");
-				System.err.println("Using the default look and feel.");
-			} catch (Exception e) {
-				System.err.println("Couldn't get specified look and feel ("
-						+ lookAndFeel
-						+ "), for some reason.");
-				System.err.println("Using the default look and feel.");
-				e.printStackTrace();
-			}
+		try {
+			UIManager.setLookAndFeel(lookAndFeel);
+			MetalLookAndFeel.setCurrentTheme(new OceanTheme());
+			UIManager.setLookAndFeel(new MetalLookAndFeel());
+		} catch (ClassNotFoundException e) {
+			System.err.println("Couldn't find class for specified look and feel:"
+					+ lookAndFeel);
+			System.err.println("Did you include the L&F library in the class path?");
+			System.err.println("Using the default look and feel.");
+		} catch (UnsupportedLookAndFeelException e) {
+			System.err.println("Can't use the specified look and feel ("
+					+ lookAndFeel
+					+ ") on this platform.");
+			System.err.println("Using the default look and feel.");
+		} catch (Exception e) {
+			System.err.println("Couldn't get specified look and feel ("
+					+ lookAndFeel
+					+ "), for some reason.");
+			System.err.println("Using the default look and feel.");
+			e.printStackTrace();
 		}
+
 	}
 
 	protected void _mainForm(){
