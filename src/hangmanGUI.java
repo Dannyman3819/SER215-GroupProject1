@@ -67,22 +67,16 @@ void disableButton(char character)
 */
 
 import java.awt.*;
-
 import javax.swing.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.WindowEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
 import javax.imageio.ImageIO;
 import javax.swing.JOptionPane;
-import javax.swing.plaf.metal.DefaultMetalTheme;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.OceanTheme;
-
 import static java.lang.System.exit;
 
 @SuppressWarnings("serial")
@@ -359,7 +353,7 @@ public class hangmanGUI extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				myActionPerformed = true;
 				eventValue = textField.getText();
-				System.out.println("eventValue = " + eventValue);
+				//System.out.println("eventValue = " + eventValue);
 				textField.setText("");
 			}
 		});
@@ -485,7 +479,8 @@ public class hangmanGUI extends JPanel {
 		try {
 			image = ImageIO.read(file);
 		} catch (IOException ex) {
-			//cant find file
+			//can't find file
+			System.out.println("Couldn't find resources file " + file.getName());
 			exit(1);
 		}
 		drawingPanel.remove(labelImages);

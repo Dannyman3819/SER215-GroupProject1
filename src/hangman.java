@@ -1,13 +1,12 @@
+/**
+ * Created by Group 4 for the SER215 Class group project
+ */
 
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
-
 import javax.swing.JOptionPane;
 
-/**
- * Created by SER215 Class - Group 4
- */
 public class hangman {
 	public static void main (String[] args) throws  InterruptedException, IOException {
 		HangDictionary dictionaryPool = new HangDictionary();
@@ -19,7 +18,6 @@ public class hangman {
 			hangmanGUI gui = new hangmanGUI();
 			String word = dictionaryPool.getWordFromFile();
 			String[] difficulty = {"BEGINNER", "INTERMEDIATE", "EXPERT"};
-			String currentDifficulty = "BEGINNER";
 			String asterisk = "";
 			int maxMisses;
 			
@@ -34,17 +32,14 @@ public class hangman {
 			if (choice == 0) {
 				maxMisses = 16;
 				gui.setDifficulty("BEGINNER");
-				currentDifficulty = "BEGINNER";
 			}
 			else if (choice == 1) {
 				maxMisses = 12;
 				gui.setDifficulty("INTERMEDIATE");
-				currentDifficulty = "INTERMEDIATE";
 			}
 			else if (choice == 2) {
 				maxMisses = 6;
 				gui.setDifficulty("HARD");
-				currentDifficulty = "HARD";
 			}
 			else
 				break;
@@ -87,6 +82,11 @@ public class hangman {
 					
 					if((string.length()> 1) && (string.compareToIgnoreCase(word) == 0))
 						won = 0;
+					else if((string.length()> 1) && (string.compareToIgnoreCase(word) != 0)){
+						wrong++;
+						gui.setGuessRemain(String.valueOf(maxMisses - wrong));
+						gui.drawNextBodyPart();
+					}
 					else{
 						if(string.length() == 1){
 							char guess = string.charAt(0);
@@ -94,6 +94,7 @@ public class hangman {
 							//places asterisks in place of the letters not guessed correctly, yet
 							for (int i = 0; i < word.length(); i++) {
 								char wordChar = word.charAt(i);
+								
 								wordChar = Character.toUpperCase(wordChar);
 								guess = Character.toUpperCase(guess);
 								if (wordChar == guess) {
@@ -108,7 +109,7 @@ public class hangman {
 								wrong++;
 								gui.drawNextBodyPart();
 							}
-
+							
 							//update GUI with updated word and remaining incorrect guesses
 							gui.setGuessRemain(String.valueOf(maxMisses - wrong));
 							for (int i = 0; i < asterisk.length(); i++) {
