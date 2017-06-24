@@ -32,10 +32,15 @@ game pane should be very easy to understand for game play.
      located in the space hierarchical position as the resource folder. In other words the
      java files and the resources folder must have the same parent folder, which will be the src folder.
     *All .png files used for the hangman body parts must be located in the resources folder.
+    *.jar located in the out folder executes the folder.
 
     *DIRECTORY TREE (Inside project folder):
         *Snapshots
         *README.txt
+        *out
+            *artifacts
+               *FinalProject.jar
+            *production
         *src
             *resources
                 *Arm1.png
