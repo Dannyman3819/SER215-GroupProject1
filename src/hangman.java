@@ -127,7 +127,7 @@ public class hangman {
 				gui.closeGUI();
 			} else if (maxMisses - wrong == 0) {
 				String [] options = {"Yes", "No"};
-				playAgain = gui.promptUser("You Lost!!!\nWould you like to play again??", options);
+				playAgain = gui.promptUser("You Lost!!!\nThe word was "+word+"\nWould you like to play again??", options);
 				gui.closeGUI();
 			}
 			
