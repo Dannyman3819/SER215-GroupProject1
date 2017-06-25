@@ -28,19 +28,18 @@ game pane should be very easy to understand for game play.
 *SETUP:
     *You must have the resources folder located inside of the src folder of our project.
     *You must have the HangmanWordsList.txt (file with word choices for game play) located in the src folder or the project folder.
-    *You must have the source code (Hangman.java, HangDictionary.java, HangmanGUI.java)
-     located in the space hierarchical position as the resource folder. In other words the
-     java files and the resources folder must have the same parent folder, which will be the src folder.
+    *You must have the src folder, which contains Hangman.java, HangDictionary.java, HangmanGUI.java,
+     located in the same hierarchical position as the resources folder. In other words the src folder
+     and the resources folder must have the same parent folder.
     *All .png files used for the hangman body parts must be located in the resources folder.
-    *.jar located in the out folder executes the folder.
+    *.jar file must be located in the same hierarchical position as the src folder.
+    *NOTE: If you are confused, simply make sure, in file explorer, that the project folder looks like the directory tree below.
 
     *DIRECTORY TREE (Inside project folder):
+        *Diagrams
         *Snapshots
         *README.txt
-        *out
-            *artifacts
-               *FinalProject.jar
-            *production
+        *FinalProject.jar
         *src
             *resources
                 *Arm1.png
